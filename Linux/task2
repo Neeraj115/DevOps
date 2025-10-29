@@ -1,0 +1,15 @@
+# Manage services and monitor processes
+
+# check service status
+sudo systemctl status cron
+ 
+# start/enable service
+sudo systemctl start cron
+sudo systemctl enable cron
+ 
+# view recent logs
+sudo journalctl -u cron -n 50
+ 
+# list processes and find one (e.g., nginx if installed)
+ps aux | grep nginx
+top    # interactive; press q to quit
