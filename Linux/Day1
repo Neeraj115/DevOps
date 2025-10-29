@@ -1,1 +1,16 @@
+#!/bin/bash
+
+# make dir,change directory
+# mkdir Day1 && cd Day1
+
+
+#Create file 
+#echo "hello" > file1.txt
+
+# change owner, permission of file
+# sudo chown neeraj:neeraj file1.txt
+# sudo chmod 600 file1.txt
+# ls -lrt --- verify
+
+echo "hello"
 
