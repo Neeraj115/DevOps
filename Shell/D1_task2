@@ -1,0 +1,7 @@
+# Backup /var/log with timestamp
+#!/bin/bash
+dest="/home/day1/backups"
+timestamp=$(date +%F_%H%M)
+mkdir -p "dest"
+sudo tar -czf "$dest/varlog_$timestamp.tar.gz" /var/log
+echo "Backup saved to $dest/varlog_$timestamp.tar.gz"
