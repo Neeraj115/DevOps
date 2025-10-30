@@ -1,1 +1,12 @@
+# Disk usage alert script
+#!/bin/bash
+Threshold=80
+email="mymail.com"
+usage=$(df -h / | awk 'NR==2 {gsub(/%/ ,"",$5); print $5}')
+if [ "$usage" -ge "$Threshold" ];
+then
+  echo "Disk usage is ${usage}% on $(hostname) at $(date)" | tee /tmp/disk_alert.txt
+else
+    echo "Disk usage is Ok: ${usgae}%"
+fi
 
